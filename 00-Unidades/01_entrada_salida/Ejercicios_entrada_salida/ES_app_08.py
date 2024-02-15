@@ -40,7 +40,17 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        operador_a = int(self.txt_operador_a.get())
+       
+        operador_b = int(self.txt_operador_b.get())
+
+        operador_a = int(operador_a)
+        
+        operador_b = int(operador_b)
+        
+        resultado = operador_a % operador_b
+
+        alert ("datos", f"el resultado de {operador_a} y {operador_b} es {resultado}") 
         
         
     

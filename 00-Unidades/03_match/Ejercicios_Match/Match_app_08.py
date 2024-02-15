@@ -34,7 +34,20 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        clima = self.combobox_destino.get()
+        
+        match clima:
+            case "Bariloche":
+                mensaje = "clima frio durante la mayoria de estaciones durante año"
+            case "Mar del plata":
+                mensaje = "clima templado y calida durante el año"
+            case "Cataratas":
+                mensaje = "clima calido y humedo durante el año"
+            case "Ushuaia":
+                mensaje = "clima frio durante todo el año"
+        
+        alert ("clima", mensaje)                    
+    
     
     
 if __name__ == "__main__":

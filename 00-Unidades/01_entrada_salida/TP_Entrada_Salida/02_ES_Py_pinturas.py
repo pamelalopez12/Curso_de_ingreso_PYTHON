@@ -48,10 +48,31 @@ class App(customtkinter.CTk):
         self.btn_convertir_f_c.grid(row=4, pady=10, columnspan=2, sticky="nsew")
     
     def btn_convertir_c_f_on_click(self):
-        pass
+        temperatura = self.txt_temperatura_c.get()
+        
+        temperatura_float = float(temperatura)
+
+        paso1_traspaso_temperatura = temperatura_float * 9/5
+        
+        paso2_traspaso_temperatura = paso1_traspaso_temperatura + 32
+        
+        message = f"esta cantidad de grados celsius, equivale a: {paso2_traspaso_temperatura} grados farenheit"
+
+        alert ("conversion de temperatura", message)
 
     def btn_convertir_f_c_on_click(self):
-        pass
+        temperatura = self.txt_temperatura_f.get()
+        
+        temperatura_float = float(temperatura)
+
+        paso1_traspaso_temperatura = temperatura_float - 32
+        
+        paso2_traspaso_temperatura = paso1_traspaso_temperatura * 5/9
+        
+        message = f"esta cantidad de grados farenheit, equivale a: {paso2_traspaso_temperatura} grados celsius"
+
+        alert ("conversion de temperatura", message)
+
     
     
 if __name__ == "__main__":

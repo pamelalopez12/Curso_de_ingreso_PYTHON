@@ -57,8 +57,51 @@ class App(customtkinter.CTk):
         
     
     def btn_informar_on_click(self):
-        pass
+        estaciones = self.combobox_estaciones.get()
+        precio = self.combobox_destino.get()
+        
+        match estaciones, precio:
+            case ("Verano", "Bariloche"): 
+                precio_1 = int(15000 * 20/100)
+                precio_final = int(15000 - precio_1)
+                mensaje = f"en Verano Bariloche cuenta con un precio de {precio_final}"
+        
+            case ("Invierno", "Bariloche"):
+                precio_2 = int(15000 * 20/100) 
+                precio_final = int(15000 + precio_2)
+                mensaje = f"en Verano Bariloche cuenta con un precio de {precio_final}"
             
+            case ("Primavera", "Bariloche"):
+                precio_3 = int(15000 * 10/100)
+                precio_final = int(15000 + precio_3)    
+                mensaje = f"en primavera Bariloche cuenta con un precio de {precio_final}"
+            
+            case ("Otoño", "Bariloche"):
+                precio_4 = int(15000 * 10/100)
+                precio_final = int(15000 + precio_4)    
+                mensaje = f"en otoño Bariloche cuebta con un precio de {precio_final}"
+            
+            case ("Verano", "Mar del plata"): 
+                precio_1 = int(15000 * 20/100)
+                precio_final = int(15000 + precio_1)
+                mensaje = f"en Verano Bariloche cuenta con un precio de {precio_final}"
+            
+            case ("Invierno", "Mar del plata"):
+                precio_2 = int(15000 * 20/100) 
+                precio_final = int(15000 - precio_2)
+                mensaje = f"en Verano Bariloche cuenta con un precio de {precio_final}"
+            
+            case ("Primavera", "Mar del plata"):
+                precio_3 = int(15000 * 10/100)
+                precio_final = int(15000 + precio_3)    
+                mensaje = f"en primavera Bariloche cuenta con un precio de {precio_final}"
+            
+            case ("Otoño", "Mar del plata"):
+                precio_4 = int(15000 * 10/100)
+                precio_final = int(15000 + precio_4)    
+                mensaje = f"en Otoño Bariloche cuebta con un precio de {precio_final}"  
+        
+        alert ("costo", mensaje)          
     
 if __name__ == "__main__":
     app = App()
