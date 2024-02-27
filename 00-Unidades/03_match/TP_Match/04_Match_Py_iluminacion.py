@@ -37,15 +37,74 @@ class App(customtkinter.CTk):
 
         self.combobox_cantidad = customtkinter.CTkComboBox(master=self, values= ["1", "2","3","4","5","6","7","8","9","10","11","12"])
         self.combobox_cantidad.grid(row=1, column=1, padx=10, pady=10)
-                
+        
         self.btn_calcular = customtkinter.CTkButton(master=self, text="Calcular", command=self.btn_calcular_on_click)
         self.btn_calcular.grid(row=2, pady=20, columnspan=2, sticky="nsew")
 
 
     def btn_calcular_on_click(self):
-        pass
-        
-    
+        marca = self.combobox_marca.get()
+        cantidad = self.combobox_cantidad.get()
+        cantidad_int = int(cantidad)
+
+
+        precio_lamparas = 800
+        descuento = 0
+        final= precio_lamparas * cantidad_int
+
+
+        match (cantidad_int):
+            case 6 | 7 | 8 | 9 | 10 | 11 | 12:
+                descuento = 50/100
+            case 5:
+                match (marca):
+                    case "ArgentinaLuz"  :
+                        descuento = 60/100
+                    case _:
+                        descuento = 70/100
+            case 4:
+                match marca:
+                    case "ArgentinaLuz" | "FelipeLamparas":
+                        descuento = 75/100
+                    case _:
+                        descuento = 80/100
+
+
+            case 3:
+                match marca:
+                    case "ArgentinaLuz" :
+                        descuento = 85/100
+                    case "felipeLamparas":
+                        descuento = 90/100
+                    case  _:
+                        descuento = 95/100
+
+
+
+
+            case _:
+                descuento = 1
+
+
+
+
+        cuenta_final = final * descuento
+
+
+        if cuenta_final > 4000:
+                cuenta_final= cuenta_final *  95/100
+
+
+        alert("precio", f"el precio final es de {cuenta_final }")
+
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     app = App()
     app.geometry("300x300")

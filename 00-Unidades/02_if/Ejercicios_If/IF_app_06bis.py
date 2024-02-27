@@ -45,14 +45,14 @@ class App(customtkinter.CTk):
       if altura_2 <= 1.59:
             mensaje = "Base"
       else: 
-         if altura_2 >= 1.60 and altura_2 < 1.79:
+          if altura_2 >= 1.60 and altura_2 < 1.79:
             mensaje = "Escolta"
-         else:
-           if altura_2 >= 1.80 and altura_2 < 1.99:
-            mensaje = "Alero"
-           else:
-            if altura_2 >= 2.00:
-             mensaje = "Ala-Pívot o Pívot"
+          else:
+            if altura_2 >= 1.80 and altura_2 < 1.99:
+              mensaje = "Alero"
+            else:
+              if altura_2 >= 2.00:
+                mensaje = "Ala-Pívot o Pívot"
 
       alert ("altura", mensaje)
   

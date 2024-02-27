@@ -52,13 +52,59 @@ class App(customtkinter.CTk):
         self.btn_total_iva.grid(row=5, pady=10, columnspan=2, sticky="nsew")
 
     def btn_total_on_click(self):
-        pass
+        importe_1 = self.txt_importe_1.get()
+        importe_2 = self.txt_importe_2.get()
+        importe_3 = self.txt_importe_3.get()
+
+        importe_1_b = float(importe_1)
+        importe_2_b = float(importe_2)
+        importe_3_b = float(importe_3)
+
+        total = importe_1_b + importe_2_b + importe_3_b
+        
+        mensaje = f"la suma de los tres productos es de un total de {total}"
+
+        alert ("total", mensaje)
+
+
+
+
 
     def btn_promedio_on_click(self):
-        pass
+        importe_1 = self.txt_importe_1.get()
+        importe_2 = self.txt_importe_2.get()
+        importe_3 = self.txt_importe_3.get()
+
+        importe_1_b = float(importe_1)
+        importe_2_b = float(importe_2)
+        importe_3_b = float(importe_3)
+
+        promedio = importe_1_b + importe_2_b + importe_3_b
+        total = promedio / 3 
+        
+        mensaje = f"la suma de los tres productos es de un total de {total}"
+
+        alert ("total", mensaje)
+
+        
 
     def btn_total_iva_on_click(self):
-        pass      
+        importe_1 = self.txt_importe_1.get()
+        importe_2 = self.txt_importe_2.get()
+        importe_3 = self.txt_importe_3.get()
+
+        importe_1_b = float(importe_1)
+        importe_2_b = float(importe_2)
+        importe_3_b = float(importe_3)
+
+        suma = importe_1_b + importe_2_b + importe_3_b
+        restante = (suma) * 21 / 100
+        total = restante + suma
+        
+        mensaje = f"la suma de los tres productos es de un total de {total}"
+
+        alert ("total", mensaje)
+
     
 if __name__ == "__main__":
     app = App()

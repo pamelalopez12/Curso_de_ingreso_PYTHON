@@ -27,7 +27,11 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+
+        for numero in range (0,100000000,2):
+            contador = prompt("enteros", "numeros enteros")
+            contador_1 = int(contador)
+            alert(contador_1)
             
         
     

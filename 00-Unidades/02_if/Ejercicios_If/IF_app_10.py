@@ -34,14 +34,14 @@ class App(customtkinter.CTk):
     def btn_mostrar_on_click(self):
         nota = random.randint(1, 10)
         
-        if nota < 4:
-         mensaje = f"su nota es {nota} usted esta medianamente aprobado"
-        elif nota < 6: 
-         mensaje = f"su nota es {nota} esta aprobado"
+        if nota <= 3:
+            mensaje = f"su nota es {nota} usted esta desaprobado"
+        elif nota <= 5: 
+            mensaje = f"su nota es {nota} esta aprobado"
         else:
-           mensaje = f"su nota es de {nota} usted tiene promocion directa"
+            mensaje = f"su nota es {nota} usted tiene promocion directa"
 
-           alert ("nota", mensaje)
+        alert ("nota", mensaje)
 
 
             

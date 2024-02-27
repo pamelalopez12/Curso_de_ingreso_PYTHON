@@ -51,28 +51,28 @@ class App(customtkinter.CTk):
     def btn_sumar_on_click(self):
         
         operador_a = int(self.txt_operador_a.get())
-       
+        
         operador_b = int(self.txt_operador_b.get()) 
         
-        operador_a = int(operador_b)
+        operador_a = int(operador_a)
 
-        operador_b = int(operador_a)
+        operador_b = int(operador_b)
         
         resultado = operador_a + operador_b
 
         alert ("resultado", f"el resultado de la cuenta de {operador_a} mas {operador_b} es {resultado}")
-   
-   
-   
+
+
+
     def btn_restar_on_click(self):
         
         operador_a = int(self.txt_operador_a.get())
 
         operador_b = int(self.txt_operador_b.get())
 
-        operador_a = int(operador_b)
+        operador_a = int(operador_a)
 
-        operador_b = int(operador_a)
+        operador_b = int(operador_b)
 
         resultado = operador_a - operador_b
 
@@ -83,16 +83,16 @@ class App(customtkinter.CTk):
 
         operador_b = int(self.txt_operador_b.get())
 
-        operador_a = int(operador_b)
+        operador_a = int(operador_a)
 
-        operador_b = int(operador_a)
+        operador_b = int(operador_b)
         
         resultado = operador_a * operador_b
         
         alert ("respuesta", f"la respuesta de la cuenta de {operador_a} multiplicado {operador_b} es {resultado}")
     
     def btn_dividir_on_click(self):
-       
+
         operador_a = int(self.txt_operador_a.get())
 
         operador_b = int(self.txt_operador_b.get())
@@ -101,8 +101,8 @@ class App(customtkinter.CTk):
 
         operador_b = int(operador_b)
         
-        resultado = operador_a // operador_b
-       
+        resultado = operador_a / operador_b
+
         alert ("respuesta", f"la respuesta de la cuenta es {resultado}")
         
 

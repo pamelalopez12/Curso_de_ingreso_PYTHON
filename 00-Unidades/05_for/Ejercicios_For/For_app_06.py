@@ -27,7 +27,22 @@ class App(customtkinter.CTk):
 
 
     def btn_mostrar_on_click(self):
-        pass
+        numero = prompt ("", "NUMERO INGRESADO")
+        
+        numero_1 = int(numero)
+        
+        numeros_divisibles = 0
+        
+        for contador in range(1,numero_1+1): 
+
+            if numero_1 % contador == 0:
+                
+                print (contador)
+                
+                numeros_divisibles += 1
+        
+        print(numeros_divisibles)
+
         
     
 if __name__ == "__main__":
